@@ -1,0 +1,49 @@
+{
+  "name": "pos-offline-online",
+  "version": "1.0.0",
+  "description": "Point of Sale (POS) dengan fitur offline-online sync",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon backend/server.js",
+    "dev:frontend": "cd frontend && npm run dev",
+    "build": "cd frontend && npm run build",
+    "setup": "npm install && cd frontend && npm install",
+    "test": "jest",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [
+    "POS",
+    "Point of Sale",
+    "offline",
+    "online",
+    "sync"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.1.1",
+    "bcryptjs": "^2.4.3",
+    "better-sqlite3": "^9.2.2",
+    "uuid": "^9.0.1",
+    "compression": "^1.7.4",
+    "helmet": "^7.1.0",
+    "express-async-errors": "^3.1.1",
+    "axios": "^1.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.54.0",
+    "prettier": "^3.1.1",
+    "jest": "^29.7.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
